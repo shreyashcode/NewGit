@@ -20,11 +20,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var sensorEventListener: SensorEventListener
     lateinit var discoBack: FrameLayout
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         discoBack = findViewById(R.id.color)
+
         sm = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         val sensorList = sm.getSensorList(Sensor.TYPE_ALL)
         for(sensor: Sensor in sensorList)
