@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity() {
 
         accelSenor = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
 
+
+
         sensorEventListener = object: SensorEventListener
         {
             override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
